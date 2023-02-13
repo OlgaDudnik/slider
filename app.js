@@ -37,7 +37,6 @@ function calcHeight() {
 }
 
 document.addEventListener("keydown", (e) => {
-  console.log(e.key);
   if (e.key === "ArrowUp") {
     up();
   } else if (e.key === "ArrowDown") {
