@@ -30,10 +30,17 @@ function down() {
 
 function calcHeight() {
   const height = container.clientHeight;
-
   // @ts-ignore
   mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`;
-
   // @ts-ignore
   sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`;
 }
+
+document.addEventListener("keydown", (e) => {
+  console.log(e.key);
+  if (e.key === "ArrowUp") {
+    up();
+  } else if (e.key === "ArrowDown") {
+    down();
+  }
+});
